@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "^1.80.1"
+  },
+  "scripts": {
+    "footer": "sass footer.sass footer.css"
+  }
+}
