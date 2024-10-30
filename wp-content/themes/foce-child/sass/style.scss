@@ -1,0 +1,11 @@
+// importations 
+@use "utils/_functions" as *;
+@use "utils/_variables" as *;
+@use "layout/_menu" as *;
+@use "layout/_flower-rotate" as *; 
+
+// déclarations
+body{
+    background-color: $border-dark;
+}
+    

@@ -3,6 +3,8 @@
     "sass": "^1.80.1"
   },
   "scripts": {
-    "footer": "sass footer.sass footer.css"
+    "footer": "sass footer.sass footer.css",
+    "dev": "sass --no-source-map sass/style.scss:css/style.css -w",
+    "build": "sass --no-source-map sass/style.scss:css/style.css --style=compressed"
   }
 }
