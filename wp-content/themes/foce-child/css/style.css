@@ -202,6 +202,40 @@
     transform: rotate(360deg);
   }
 }
+.child_banner {
+  position: relative;
+  object-fit: contain;
+  height: 800px;
+}
+
+.child_banner__banner {
+  bottom: 0px;
+  left: 0px;
+  animation: down 2s 300ms;
+}
+
+/* Descendre */
+@keyframes down {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Monter */
+@keyframes up {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body {
   background-color: rgba(198, 83, 140, 0.88);
 }

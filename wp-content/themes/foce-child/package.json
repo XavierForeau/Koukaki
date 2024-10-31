@@ -4,7 +4,7 @@
   },
   "scripts": {
     "footer": "sass footer.sass footer.css",
-    "dev": "sass --no-source-map sass/style.scss:css/style.css -w",
-    "build": "sass --no-source-map sass/style.scss:css/style.css --style=compressed"
+    "dev": "sass --no-source-map sass/style.scss:style.css -w",
+    "build": "sass --no-source-map sass/style.scss:style.css --style=compressed"
   }
 }

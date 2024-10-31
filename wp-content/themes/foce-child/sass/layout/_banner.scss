@@ -1,0 +1,52 @@
+// Banner
+.banner {
+  position: relative;
+  object-fit: contain;
+  height: 800px;
+  background-image: none;
+  & img {
+    width: 1440px;
+    bottom: 0px;
+    left: 65px;
+  }
+  &__banner,
+  &__video{
+    animation: down 2s 300ms;
+    z-index: -2;
+    position: absolute;
+    bottom: 0px;
+    left: 0px !important;    
+  }
+  &__logo {
+    max-width: 50%;
+    animation: up 2s 300ms;  
+  }
+}
+
+.story{
+  animation: up 2s 300ms;  
+
+}
+
+/* Descendre */
+@keyframes down {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }  
+  100% {
+    transform: translateY(0);
+    opacity:1;
+  }
+}
+/* Monter */
+@keyframes up {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  } 
+  100% {
+    transform: translateY(0);
+    opacity: 1;  
+  }
+}

@@ -44,14 +44,5 @@
             
 		</nav><!-- #site-navigation -->
 
-        <!-- Eke -->
-        <div id="menu"  class="hidden">
-            <img class="modal__content--logo" 
-                src="<?php echo get_template_directory_uri() . '-child/assets/images/logo.png'; ?>" alt="logo">
-<!-- Eke 
-        <img class="imgMenu logoMenu" src="
-         echo get_template_directory_uri() . '-child/assets/images/logo.png'; ?> 
-                    " alt="logo">
 
--->
  	</header><!-- #masthead -->
