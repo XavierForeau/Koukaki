@@ -22,31 +22,20 @@
     animation: up 2s 300ms;  
   }
 }
+.story h2 {
+  display: inline-block;
+  width:100%;
+}
 
-.story{
+.story h2:before {
+  z-index: 1;
+}
+.story h2:after {
+  z-index: 2;
+}
+
+.story h2, .story article::before, .story article::after{
   animation: up 2s 300ms;  
-
 }
 
-/* Descendre */
-@keyframes down {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }  
-  100% {
-    transform: translateY(0);
-    opacity:1;
-  }
-}
-/* Monter */
-@keyframes up {
-  0% {
-    transform: translateY(150px);
-    opacity: 0;
-  } 
-  100% {
-    transform: translateY(0);
-    opacity: 1;  
-  }
-}
+

@@ -202,22 +202,37 @@
     transform: rotate(360deg);
   }
 }
-.child_banner {
+.banner {
   position: relative;
   object-fit: contain;
   height: 800px;
+  background-image: none;
+}
+.banner img {
+  width: 1440px;
+  bottom: 0px;
+  left: 65px;
+}
+.banner__banner, .banner__video {
+  animation: down 2s 300ms;
+  z-index: -2;
+  position: absolute;
+  bottom: 0px;
+  left: 0px !important;
+}
+.banner__logo {
+  max-width: 50%;
+  animation: up 2s 300ms;
 }
 
-.child_banner__banner {
-  bottom: 0px;
-  left: 0px;
-  animation: down 2s 300ms;
+.story h2{
+  animation: up 2s 300ms;
 }
 
 /* Descendre */
 @keyframes down {
   0% {
-    transform: translateY(-300px);
+    transform: translateY(-200px);
     opacity: 0;
   }
   100% {
@@ -228,14 +243,11 @@
 /* Monter */
 @keyframes up {
   0% {
-    transform: translateY(600px);
+    transform: translateY(150px);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
-}
-body {
-  background-color: rgba(198, 83, 140, 0.88);
 }
