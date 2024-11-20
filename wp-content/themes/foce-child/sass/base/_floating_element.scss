@@ -1,0 +1,31 @@
+    /* Container for the floating element */
+    .container {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(to bottom, #2d3e50, #445f73);
+      //  overflow: hidden;
+      }
+  
+      /* Floating element */
+      .floating-element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        animation: floating 3s ease-in-out infinite;
+      }
+  
+      /* Floating animation */
+      @keyframes floating {
+        0% {
+          transform: translate(-50%, -50%) translate(0,0);
+        }
+        50% {
+          transform: translate(-50%, -50%) translate(-20px);
+        }
+        100% {
+          transform: translate(-50%, -50%) translate(0,0px);
+        }
+      }

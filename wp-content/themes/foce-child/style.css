@@ -21,11 +21,40 @@
     opacity: 1;
   }
 }
-* ::after, #studio h2::before, .sectionFestival::before, .site-footer::before, .flower {
-  animation: spin 19s linear infinite;
+section:not(.story), .banner .imgLogo .site-footer {
+  animation: effet-fade-in 2s 0ms ease-in-out both;
 }
 
-@keyframes spin {
+.banner {
+  animation: effet-fade-in-movie 2s 0ms ease-in-out both;
+  background-image: none;
+}
+
+@keyframes effet-fade-in {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes effet-fade-in-movie {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+*::after, .studio h2::before, .site-footer::before {
+  animation: rotation 19s linear infinite;
+}
+
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
@@ -33,6 +62,104 @@
     transform: rotate(360deg);
   }
 }
+.title span {
+  position: relative;
+  top: 80px;
+  opacity: 0;
+}
+
+.scroll-title span:first-child {
+  animation: scroll 500ms ease-in-out both;
+}
+
+.scroll-title span:last-child {
+  animation: scroll 1s 500ms ease-in-out both;
+}
+
+@keyframes scroll {
+  0% {
+    position: relative;
+    top: 80px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}
+/* Container for the floating element */
+.container {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2d3e50, #445f73);
+}
+
+/* Floating element */
+.floating-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floating {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0px);
+  }
+}
+/* Basic Swiper styling */
+.swiper-container {
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  margin: auto;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0073e6 !important;
+}
+
+.story #characters {
+  display: block;
+}
+
+.main-character h3 {
+  background-position: left;
+  text-align: left;
+  padding-left: 50px;
+}
+
 .banner {
   position: relative;
   object-fit: contain;
@@ -52,7 +179,6 @@
   left: 0px !important;
 }
 .banner__logo {
-  max-width: 50%;
   animation: up 2s 300ms;
 }
 
@@ -69,6 +195,40 @@
   z-index: 2;
 }
 
-.story h2, .story article::before, .story article::after {
+.story h2,
+.main-character, .other-characters,
+.place, .place h3, .story #place,
+.studio,
+.site-footer {
   animation: up 2s 300ms;
+}
+
+.site-footer {
+  display: block;
+}
+
+.oscars {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.oscars_background {
+  background-image: url("./assets/images/oscars_nuage_orange.png");
+  background-size: 100%;
+}
+.oscars h3 {
+  font-family: Quicksand;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  color: white;
+  padding: 10px 30px 30px 60px;
+  text-shadow: #000 1px 0 10px;
+}
+.oscars img {
+  width: 278px;
+  height: 129px;
+  margin-top: 30px;
 }

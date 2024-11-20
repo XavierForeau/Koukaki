@@ -1,0 +1,28 @@
+ 
+.oscars {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+      &_background{
+        background-image: url("./assets/images/oscars_nuage_orange.png");
+        background-size: 100%;
+      }
+    
+      & h3{
+          font-family: Quicksand;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 50px;
+          letter-spacing: -0.02em;
+          color: white;
+          padding: 10px 30px 30px 60px;
+          text-shadow: #000 1px 0 10px;
+      }    
+      & img {
+          width: 278px;
+          height: 129px;
+          margin-top: 30px;
+      }
+}

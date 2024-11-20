@@ -1,8 +1,16 @@
 // importations 
-@use "base/_animations" as *;
+
+@use "base/_up_down" as *;
+@use "base/_fade_in" as *; 
+@use "base/_flower_rotate" as *; 
+@use "base/_scroll_title" as *; 
+@use "base/_floating_element" as *; 
+@use "base/_swiper" as *; 
+
+@use "layout/_banner" as *; 
+@use "layout/_footer" as *; 
+@use "layout/_oscars_2022" as *; 
+
 @use "utils/_functions" as *;
 @use "utils/_variables" as *;
-@use "layout/_flower-rotate" as *; 
-@use "layout/_banner" as *; 
 
-   

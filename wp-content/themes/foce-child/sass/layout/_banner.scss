@@ -18,7 +18,7 @@
     left: 0px !important;    
   }
   &__logo {
-    max-width: 50%;
+  //  max-width: 50%;
     animation: up 2s 300ms;  
   }
 }
@@ -34,8 +34,12 @@
   z-index: 2;
 }
 
-.story h2, .story article::before, .story article::after{
+.story h2,
+.main-character, .other-characters,
+.place, .place h3, .story #place,
+.studio,
+.site-footer {
   animation: up 2s 300ms;  
 }
-
+ 
 

@@ -13,9 +13,9 @@
 
 	<footer id="colophon" class="site-footer">
         <ul>
-            <li><a href="#">My Mentions Légales</a></li>
-            <li><a href="#">MY STUDIO KOUKAKI</a></li>
-            <li><a href="#">My Contacts</a></li>
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">STUDIO KOUKAKI</a></li>
+            <li><a href="#">Contacts</a></li>
         </ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

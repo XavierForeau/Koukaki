@@ -1,0 +1,14 @@
+// Rotation des fleurs
+
+*::after, .studio h2::before, .site-footer::before {
+    animation: rotation 19s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
