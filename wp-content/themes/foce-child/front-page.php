@@ -44,7 +44,7 @@ get_header();
             <!-- PERSONNAGES -->
             <article id="characters">
                 <div class="main-character">
-                    <h3 class="title"><span>Les personnages</span></h3>
+                    <h3 class="title"><span>Les </span><span>personnages</span></h3>
                 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -66,14 +66,18 @@ get_header();
             <!-- LIEU -->
             <article id="place" class="place parallax-container">
                 <div>
-                    <h3 class="title"><span>Le Lieu</span></h3>
+                    <h3 class="title"><span>Le </span><span>Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 
                 <!-- Image qui se déplace horizontalement avec le parallax -->
-                <img src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud" class="parallax-image little-cloud" 
-                    data-bottom-top="right:200px;" 
-                    data-top-bottom="right:50px;">
+                <img src="<?php echo get_theme_file_uri() . '/assets/images/big_cloud.png'; ?>" alt="big cloud" class="parallax-image big-cloud" 
+                    data-bottom-top="right:122px;" 
+                    data-top-bottom="right:572px;">
+
+                    <img src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud" class="parallax-image little-cloud" 
+                    data-bottom-top="right:500px;" 
+                    data-top-bottom="right:970px;">
             </article>
             
         </section>

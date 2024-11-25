@@ -161,21 +161,27 @@ section:not(.story), .banner .imgLogo .site-footer {
   padding-left: 50px;
 }
 
+.story #place {
+  background-image: url("./assets/images/place_bg_no_clouds.png");
+}
+
 .story .little-cloud,
 .story .big-cloud {
   position: absolute;
   z-index: 1;
-  filter: blur(25px);
+  filter: blur(12px);
 }
 
 .story .big-cloud {
-  top: 150px;
-  right: 0px;
+  top: 60px;
+  width: 316px;
+  height: 122px;
 }
 
 .story .little-cloud {
-  top: 350px;
-  right: 0px;
+  top: 270px;
+  width: 150px;
+  height: 60px;
 }
 
 /* Conteneur pour le parallax */
@@ -188,7 +194,7 @@ section:not(.story), .banner .imgLogo .site-footer {
 /* Image avec l'effet de parallax horizontal */
 .parallax-little-cloud {
   position: absolute;
-  top: 20%;
+  top: 50px;
   left: 50%;
   transform: translateY(-50%);
   width: 20%; /* Taille de l'image */
