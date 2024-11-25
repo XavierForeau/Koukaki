@@ -1,0 +1,47 @@
+//animation nuages
+.story .little-cloud,
+.story .big-cloud {
+    position: absolute;
+    z-index: 1;
+    filter: blur(25px);
+}
+.story .big-cloud {
+    top: 150px;
+    right: 0px;
+}
+.story .little-cloud {
+    top: 350px;
+    right: 0px;
+}
+
+//------ insert parallax
+
+/* Conteneur pour le parallax */
+.parallax-container {
+    position: relative;
+//    height: 100vh; /* La taille de la fenêtre pour la première section */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Image avec l'effet de parallax horizontal */
+.parallax-little-cloud {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 20%; /* Taille de l'image */
+    height: auto;
+//    filter: blur(25px);
+}
+
+/* Image avec l'effet de parallax horizontal */
+.parallax-big-cloud {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    transform: translateY(-50%);
+    width: 30%; /* Taille de l'image en % de la largeur */
+    height: auto;
+//    filter: blur(20px);
+}

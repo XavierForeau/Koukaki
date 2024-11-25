@@ -5,15 +5,17 @@ get_header();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
     <main id="primary" class="site-main">
-
         <section class="banner">
+
             <!-- ETAPE 1 : Modifier l'affichage général --> 
             <img class="banner__banner" 
                 src="<?php echo get_theme_file_uri() . '/assets/images/banner.png'; ?>" alt="banniere">
+            
             <!-- ETAPE 2 : Ajout de la vidéo --> 
             <video class="banner__video" width="1440" autoplay="autoplay" muted="" loop="infinite" poster="">
                     <source src="<?php echo get_theme_file_uri() . '/assets/videos/Studio+Koukaki-video+header+sans+son.mp4'; ?>" type="video/mp4">
             </video>
+            
             <!-- ETAPE 1 : Modifier l'affichage général, avec un mvt de floating --> 
             <div class="container">
                 <div class="floating-element">
@@ -21,27 +23,27 @@ get_header();
                             src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="logo">
                 </div>
             </div>
-        </section>
+         
+       </section>
 
         <section id="story" class="story title-wrapper">
-
-            <!-- l'HISTOIRE -->
             <h2 class="title"> <span>L'</span><span>histoire</span></h2>
             <article id="story__article" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            <?php
-                $args = array(
-                    'post_type' => 'characters',
-                    'posts_per_page' => -1,
-                    'meta_key'  => '_main_char_field',
-                    'orderby'   => 'meta_value_num',
 
-                );
-                $characters_query = new WP_Query($args);
+            <!-- extract --> 
+            <?php
+            $args = array(
+                'post_type' => 'characters',
+                'posts_per_page' => -1,
+                'meta_key'  => '_main_char_field',
+                'orderby'   => 'meta_value_num',
+
+            );
+            $characters_query = new WP_Query($args);
             ?>
 
-            <!-- PERSONNAGES -->
             <article id="characters">
                 <div class="main-character">
                     <h3 class="title"><span>Les personnages</span></h3>
@@ -63,7 +65,6 @@ get_header();
                 </div>
             </article>
 
-            <!-- LIEU -->
             <article id="place" class="place parallax-container">
                 <div>
                     <h3 class="title"><span>Le Lieu</span></h3>
@@ -72,10 +73,9 @@ get_header();
 
                 <!-- Image qui se déplace horizontalement avec le parallax -->
                 <img src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud" class="parallax-image little-cloud" 
-                    data-bottom-top="right:200px;" 
-                    data-top-bottom="right:50px;">
+                    data-0="transform: translateX(0%);" 
+                    data-1000="transform: translateX(-100%);">
             </article>
-            
         </section>
 
         <section id="studio" class="studio title-wrapper">
@@ -86,14 +86,27 @@ get_header();
             </div>
         </section>
 
-    </section>
+        <!-- Section parallax -->
+        <div class="parallax-container">
+            <img src="<?php echo get_theme_file_uri() . '/assets/images/Studio_Koukaki-image_place.png'; ?>" alt="Studio Koukaki" class="background-image">
+            
+            <!-- Image qui se déplace horizontalement avec le parallax -->
+            <img src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="little cloud" class="parallax-image" 
+                data-0="transform: translateX(0%);" 
+                data-1000="transform: translateX(-100%);">
+        </div>
+
+  <!-- Autres sections pour tester le défilement -->
+  <div class="content">
+    <h1>Défilez vers le bas pour voir l'effet parallax !</h1>
+    <p>Le fond reste statique, tandis que l'image se déplace horizontalement à mesure que vous faites défiler la page.</p>
+  </div>
 
     </main><!-- #main -->
 
     <!-- Ajout de la section des nomminations aux Oscars 2022 --> 
     <?php get_template_part( 'parts/oscars-2022' ); ?>
   
-    <!-- Initialisation de Skrollr -->
   <!-- Initialisation de Skrollr -->
   <script>
     skrollr.init();

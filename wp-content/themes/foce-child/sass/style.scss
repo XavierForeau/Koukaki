@@ -7,6 +7,8 @@
 @use "base/_floating_element" as *; 
 @use "base/_swiper" as *; 
 
+@use "components/_cloud" as *; 
+
 @use "layout/_banner" as *; 
 @use "layout/_footer" as *; 
 @use "layout/_oscars_2022" as *; 
@@ -14,3 +16,6 @@
 @use "utils/_functions" as *;
 @use "utils/_variables" as *;
 
+ // commande => 'npm run dev' 
+ // mode normal & à lancer depuis terminal, 
+ // dans le répertoire foce-child

@@ -3,22 +3,19 @@
     width: 100%;
     height: 500px; /* Adjust as needed */
     margin: auto;
+    perspective: 1500px; /* Default perspective for 3D effect */
 }
 
 .swiper-slide {
-//    background: #fff;
-//    border-radius: 10px;
-//    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-//    text-align: center;
-//    line-height: 200px;
-//    font-size: 20px;
-//    color: #333;
-
-    // démo
     background-position: center;
     background-size: cover;
     width: 300px;
     height: 300px;
+}
+
+// Optional: Adjust the active slide to have a defined look 
+.swiper-slide-active {
+    transform: scale(1) !important; // Make sure the active slide isn't scaled down 
 }
 
 .swiper-slide img {
@@ -26,17 +23,15 @@
     width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #fff;
+// Optional: Remove the shadow effect completely if desired 
+.swiper-slide-next, .swiper-slide-prev {
+    opacity: 1 !important; // Make sure neighboring slides are also fully opaque 
+    box-shadow: none !important; // Remove any shadow if applied 
 }
 
-.swiper-pagination-bullet {
-    background: #fff !important;
-}
-
-.swiper-pagination-bullet-active {
-    background: #0073e6 !important;
+// remove the shadow box  
+.swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-left {
+    background-image: none !important;
 }
 
 .story #characters {
@@ -44,7 +39,7 @@
 }
 
 .main-character h3{
-     background-position: left;
-    text-align: left;
+    background-position: left;
+    text-align: left; 
     padding-left: 50px;
 }
