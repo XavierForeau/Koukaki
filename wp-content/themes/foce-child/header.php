@@ -27,22 +27,50 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
+
+            <!-- URL site + Menu Burger -->
+            <ul>
+            <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+            </ul>
+
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
 
-            <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
-            </ul>
+            <!-- images -->
+            <img class="logo"
+                src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
+                alt="logo Fleurs d'oranger & chats errants">
 
-            
-		</nav><!-- #site-navigation -->
+            <!-- Menu plein écran --> 
+            <div id="menu-fullscreen" >
+
+                <!-- images -->
+                <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo">
+                <img class="rdm-flower" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower.png'; ?> " alt="">
+                <img class="sun-flower"  src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?> " alt="">
+                <img class="orchid" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'; ?> " alt="">
+                <img class="flower" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/flower.png'; ?> " alt="">
+                <img class="hibiscus" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/hibiscus.png'; ?> " alt="">
+                <img class="yellow-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-yellow.png'; ?> " alt="">
+                <img class="black-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-black.png'; ?> " alt="">
+                <img class="blue-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-blue.png'; ?> "alt="">
+
+                <!-- liens -->
+                <ul>
+                    <li><a href="#story">Histoire</a></li>
+                    <li><a href="#characters">Personnages</a></li>
+                    <li><a href="#place">Lieu</a></li>
+                    <li><a href="#studio">Studio Koukaki</a></li>
+                </ul>
+                <p>Studio Koukaki</p>
+            </div>
+
+
+ 		
+        </nav><!-- #site-navigation -->
 
 
  	</header><!-- #masthead -->

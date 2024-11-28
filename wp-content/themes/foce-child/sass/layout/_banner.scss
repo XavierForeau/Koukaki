@@ -5,7 +5,7 @@
   height: 800px;
   background-image: none;
   & img {
-    width: 1440px;
+    width: 100%;
     bottom: 0px;
     left: 65px;
   }
@@ -18,8 +18,17 @@
     left: 0px !important;    
   }
   &__logo {
-  //  max-width: 50%;
     animation: up 2s 300ms;  
+
+    //  Ajout parallax
+    position: fixed;
+    top: 50%; /* Place le logo initialement au centre de l'écran */
+    left: 50%;
+      transform: translatey(-50%);
+    //  width: 150px;
+      transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+      pointer-events: none;
+      z-index: 9999;
   }
 }
 .story h2 {
@@ -42,4 +51,16 @@
   animation: up 2s 300ms;  
 }
  
-
+//---------------------------------
+// ajout du parallax sur le logo
+//---------------------------------
+/* Style de base pour le logo et l'effet de parallax */
+.sticky-logo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  margin-top: 0;
+  transition: transform 0.2s ease-in-out;
+}

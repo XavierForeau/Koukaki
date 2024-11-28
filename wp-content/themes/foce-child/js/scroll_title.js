@@ -16,3 +16,4 @@ titleScroll.forEach(currentTitle => {
 
     observer.observe(currentTitle);
 });
+

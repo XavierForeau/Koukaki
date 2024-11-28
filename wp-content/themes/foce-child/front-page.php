@@ -17,8 +17,14 @@ get_header();
             <!-- ETAPE 1 : Modifier l'affichage général, avec un mvt de floating --> 
             <div class="container">
                 <div class="floating-element">
-                    <img class="banner__logo" 
-                            src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="logo">
+                    <div class="parallax-logo-wrapper">
+                        <img class="banner__logo" 
+                                src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" 
+                                    alt="logo"
+                                    class="parallax-image"
+                                    data-bottom-top="right:500px;" 
+                                    data-top-bottom="right:970px;">
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,11 +103,30 @@ get_header();
     <!-- Ajout de la section des nomminations aux Oscars 2022 --> 
     <?php get_template_part( 'parts/oscars-2022' ); ?>
   
-    <!-- Initialisation de Skrollr -->
   <!-- Initialisation de Skrollr -->
   <script>
     skrollr.init();
   </script>
-  
+ 
+ <!-- écoute du scroll du logo et activation du sticky -->                       
+ <script>
+    window.addEventListener('scroll', function() {
+        const logo = document.querySelector('.banner__logo');
+        const logoTop = logo.offsetTop;
+        const videoContainer = document.querySelector('.banner__video');
+        const videoHeight = videoContainer.offsetHeight;
+        const scrollPosition = window.scrollY;
+
+        // Calculer la hauteur de la vidéo et ajuster le logo
+        if (scrollPosition < logoTop) {
+            logo.classList.add('sticky-logo'); // Ajouter la classe sticky lorsque le bas de la vidéo est atteint
+            console.log("sticky scroll:",scrollPosition,"Top logo:",logoTop);
+        } else {
+            logo.classList.remove('sticky-logo'); // Enlever la classe sticky lorsque la vidéo est encore visible
+            console.log("unsticky scroll:",scrollPosition,"Top logo:",logoTop);
+       }
+    });
+</script>
+
 <?php
 get_footer();

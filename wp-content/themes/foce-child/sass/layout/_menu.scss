@@ -1,0 +1,160 @@
+// Menu Burger & Co (for the junk food :-)
+
+// Styles de base pour le bouton menu burger 
+.menu-toggle {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+.menu-toggle .line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+  
+// Lorsque le menu est ouvert, transformer le burger en croix
+.menu-toggle.active .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active .line:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg); 
+}
+  
+// Activation ou non de l'affichage du menu en plein écran 
+#menu-fullscreen {
+    display: none; 
+}
+#menu-fullscreen.active {
+    display: block; /* Afficher lorsque le menu est ouvert */
+}
+
+//-------------
+  #menu-fullscreen2 {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform-origin: top;
+    transition: top 0.7s ease-in-out;
+    overflow: hidden;
+  
+    &.active {
+      top: 80px;
+    }
+  
+    .logo {
+      display: block;
+      position: absolute;
+      top: 3%;
+      width: 25%;
+    }
+  
+    ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      margin-top: 120px;
+  
+      li {
+        a {
+          color: #000;
+          text-decoration: none;
+          font-size: 3rem;
+  
+          &:hover {
+            text-shadow: 0px 0px 14px #ff5c00;
+          }
+        }
+      }
+  
+      p {
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 10%;
+      }
+    }
+  }
+  
+  .logo {
+    margin-left: 25%;
+    margin-top: 100px;
+  }
+  
+  .rdm-flower {
+    position: absolute;
+    top: 40%;
+    right: -2%;
+    width: 5%;
+  }
+  
+  .hibiscus {
+    position: absolute;
+    width: 30%;
+    bottom: -17%;
+    right: -15%;
+  }
+  
+  .orchid {
+    position: absolute;
+    top: 7%;
+    left: -4%;
+  }
+  
+  .flower {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 5%;
+  }
+  
+  .sun-flower {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+  }
+  
+  .yellow-cat {
+    position: absolute;
+    width: 5%;
+    bottom: 20%;
+    left: 4%;
+  }
+  
+  .black-cat {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    width: 7%;
+  }
+  
+  .blue-cat {
+    position: absolute;
+    top: 23%;
+    left: 20%;
+  }
+  
+  .sun-flower, .flower, .orchid, .hibiscus, .rdm-flower {
+    animation: rotation 4s linear infinite; /* Rotation continue pendant 4 secondes */
+  }
+  
+  .cat,
+  .dark-cat,
+  .yellow-cat, .logo {
+    animation: floatLogo 3s ease-in-out infinite alternate;
+  }
