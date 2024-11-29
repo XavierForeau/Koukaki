@@ -39,38 +39,29 @@
                 <span class="line"></span>
             </button>
 
-            <!-- images -->
-            <img class="logo"
-                src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
-                alt="logo Fleurs d'oranger & chats errants">
-
             <!-- Menu plein écran --> 
             <div id="menu-fullscreen" >
 
                 <!-- images -->
-                <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo">
-                <img class="rdm-flower" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower.png'; ?> " alt="">
-                <img class="sun-flower"  src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?> " alt="">
-                <img class="orchid" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'; ?> " alt="">
-                <img class="flower" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/flower.png'; ?> " alt="">
-                <img class="hibiscus" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/hibiscus.png'; ?> " alt="">
-                <img class="yellow-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-yellow.png'; ?> " alt="">
-                <img class="black-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-black.png'; ?> " alt="">
-                <img class="blue-cat" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat-blue.png'; ?> "alt="">
+                <img class="logo-menu" src="<?php echo get_theme_file_uri() . '/assets/images/logo_menu.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                <img class="random-flower" src="<?php echo get_theme_file_uri() . '/assets/images/random_flower.png'; ?> " alt="random_flower">
+                <img class="sun-flower"  src="<?php echo get_theme_file_uri() . '/assets/images/Sunflower.png'; ?> " alt="Sunflower">
+                <img class="orchid" src="<?php echo get_theme_file_uri() . '/assets/images/orchid.png'; ?> " alt="orchid">
+                <img class="flower" src="<?php echo get_theme_file_uri() . '/assets/images/flower.png'; ?> " alt="another flower">
+                <img class="hibiscus" src="<?php echo get_theme_file_uri() . '/assets/images/hibiscus.png'; ?> " alt="hibiscus">
+                <img class="yellow-cat" src="<?php echo get_theme_file_uri() . '/assets/images/cat-yellow.png'; ?> " alt="yellow cat">
+                <img class="black-cat" src="<?php echo get_theme_file_uri() . '/assets/images/cat-black.png'; ?> " alt="black cat">
+                <img class="blue-cat" src="<?php echo get_theme_file_uri() . '/assets/images/cat-blue.png'; ?> "alt="blue cat">
 
                 <!-- liens -->
                 <ul>
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
+                    <li><a href="#story" class="title"><span>Histoire</span></a></li>
+                    <li><a href="#characters" class="title"><span>Personnages</span></a></li>
                     <li><a href="#place">Lieu</a></li>
                     <li><a href="#studio">Studio Koukaki</a></li>
                 </ul>
-                <p>Studio Koukaki</p>
+                <p class="menuP">STUDIO KOUKAKI</p>          
             </div>
 
-
- 		
         </nav><!-- #site-navigation -->
-
-
  	</header><!-- #masthead -->
