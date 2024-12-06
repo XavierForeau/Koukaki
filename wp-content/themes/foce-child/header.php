@@ -57,8 +57,8 @@
                 <ul>
                     <li><a href="#story" class="title"><span>Histoire</span></a></li>
                     <li><a href="#characters" class="title"><span>Personnages</span></a></li>
-                    <li><a href="#place">Lieu</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
+                    <li><a href="#place" class="title"><span>Lieu</span></a></li>
+                    <li><a href="#studio" class="title"><span>Studio Koukaki</span></a></li>
                 </ul>
                 <p class="menuP">STUDIO KOUKAKI</p>          
             </div>

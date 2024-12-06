@@ -223,6 +223,21 @@ section:not(.story), .banner .imgLogo .site-footer {
   align-items: center; /* Aligner les éléments verticalement */
 }
 
+#site-navigation {
+  display: flex;
+  justify-content: space-between; /* Pour espacer le site-title et le menu burger */
+  align-items: center; /* Aligner verticalement le site-title et le menu burger */
+}
+
+/* Centrer le site-title */
+.site-title {
+  flex-grow: 1; /* Permet au site-title de prendre toute la largeur restante */
+  text-align: center; /* Centrer le texte */
+}
+.site-title a {
+  margin-left: 500px;
+}
+
 .menu-toggle {
   background: transparent;
   border: none;
@@ -233,6 +248,7 @@ section:not(.story), .banner .imgLogo .site-footer {
   height: 20px;
   padding: 0;
   cursor: pointer;
+  margin-left: auto; /* Pousse le bouton burger à droite */
 }
 
 .menu-toggle .line {
@@ -256,17 +272,10 @@ section:not(.story), .banner .imgLogo .site-footer {
 
 #menu-fullscreen {
   display: none;
-}
-
-#menu-fullscreen.active {
-  display: block; /* Afficher lorsque le menu est ouvert */
-}
-
-#menu-fullscreen {
   position: fixed;
   top: -100%;
   width: 1441px;
-  height: 57vh;
+  height: 79vh;
   background: #fff5e9;
   display: flex;
   flex-direction: column;
@@ -278,7 +287,8 @@ section:not(.story), .banner .imgLogo .site-footer {
   transition: top 0.5s ease-in-out;
 }
 #menu-fullscreen.active {
-  top: 60px;
+  top: 80px;
+  display: block;
 }
 #menu-fullscreen .logo-menu {
   display: block;
@@ -289,6 +299,7 @@ section:not(.story), .banner .imgLogo .site-footer {
   margin-top: 6%;
 }
 #menu-fullscreen ul {
+  display: block;
   list-style: none;
   text-align: center;
   margin: 0;
@@ -308,6 +319,10 @@ section:not(.story), .banner .imgLogo .site-footer {
   text-transform: uppercase;
   position: absolute;
   bottom: 10%;
+}
+
+.main-navigation.toggled ul {
+  display: flex;
 }
 
 .random-flower {
