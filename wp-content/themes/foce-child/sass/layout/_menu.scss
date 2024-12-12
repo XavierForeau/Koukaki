@@ -65,11 +65,11 @@
     position: fixed;
     top: -100%; 
     width: 1441px;
-    height: 79vh;
+    height: calc(100vh - 80px);
     background: #fff5e9;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     z-index: 2;
     overflow: hidden;

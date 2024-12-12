@@ -10,9 +10,10 @@
 @use "components/_cloud" as *; 
 
 @use "layout/_menu" as *;  
-@use "layout/_banner" as *; 
+@use "layout/_front-page" as *; 
 @use "layout/_footer" as *; 
 @use "layout/_oscars_2022" as *; 
+@use "layout/_responsive" as *; 
 
 @use "utils/_functions" as *;
 @use "utils/_variables" as *;

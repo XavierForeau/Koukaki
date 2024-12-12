@@ -7,7 +7,7 @@ titleScroll.forEach(currentTitle => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('scroll-title');
-                console.log("animation scroll ", entry);
+                //console.log("animation scroll ", entry);
             return;
             }
             entry.target.classList.remove('scroll-title');

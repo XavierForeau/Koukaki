@@ -2,32 +2,29 @@
 
 get_header();
 ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-
+    
     <main id="primary" class="site-main">
 
         <section class="banner">
-            <!-- ETAPE 1 : Modifier l'affichage général --> 
+            <!-- bannière --> 
             <img class="banner__banner" 
                 src="<?php echo get_theme_file_uri() . '/assets/images/banner.png'; ?>" alt="banniere">
-            <!-- ETAPE 2 : Ajout de la vidéo --> 
+
+            <!-- vidéo --> 
             <video class="banner__video" width="1440" autoplay="autoplay" muted="" loop="infinite" poster="">
                     <source src="<?php echo get_theme_file_uri() . '/assets/videos/Studio+Koukaki-video+header+sans+son.mp4'; ?>" type="video/mp4">
             </video>
-            <!-- ETAPE 1 : Modifier l'affichage général, avec un mvt de floating --> 
-            <div class="container">
-                <div class="floating-element">
-                    <div class="parallax-logo-wrapper" data-bottom="top:0%" 
-                                    data-top="top:-100%;"
-                                    >
+
+            <!-- Logo avec parallax --> 
+                <div class="parallax-logo-wrapper" 
+                   data-top="bottom:0%" 
+                   data-bottom="bottom:50%;">
+                    <div class="floating-element">
                         <img class="banner__logo" 
                                 src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" 
-                                    alt="logo"
-                                    class="parallax-image"
-                                    >
+                                    alt="logo">
                     </div>
                 </div>
-            </div>
         </section>
 
         <section id="story" class="story title-wrapper">

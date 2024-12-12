@@ -275,7 +275,7 @@ section:not(.story), .banner .imgLogo .site-footer {
   position: fixed;
   top: -100%;
   width: 1441px;
-  height: 79vh;
+  height: calc(100vh - 80px);
   background: #fff5e9;
   display: flex;
   flex-direction: column;
@@ -397,16 +397,17 @@ section:not(.story), .banner .imgLogo .site-footer {
     transform: translate(-50%, -50%);
   }
 }
+/* Banner */
 .banner {
   position: relative;
-  object-fit: contain;
   height: 800px;
   background-image: none;
+  overflow: hidden; /* Empêche le débordement de l'élément lorsque l'effet de parallax est appliqué */
+  /* Le logo dans la bannière avec parallax */
 }
 .banner img {
   width: 100%;
   bottom: 0px;
-  left: 65px;
 }
 .banner__banner, .banner__video {
   animation: down 2s 300ms;
@@ -416,48 +417,34 @@ section:not(.story), .banner .imgLogo .site-footer {
   left: 0px !important;
 }
 .banner__logo {
-  animation: up 2s 300ms;
-  position: fixed;
-  top: 50%; /* Place le logo initialement au centre de l'écran */
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translatey(-50%);
-  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
-  pointer-events: none;
+  transform: translate(-50%, -50%);
   z-index: 9999;
+  pointer-events: none;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
-.story h2 {
-  display: inline-block;
-  width: 100%;
-}
-
-.story h2:before {
-  z-index: 1;
-}
-
-.story h2:after {
-  z-index: 2;
-}
-
-.story h2,
-.main-character, .other-characters,
-.place, .place h3, .story #place,
-.studio,
-.site-footer {
-  animation: up 2s 300ms;
-}
-
-/* Style de base pour le logo et l'effet de parallax */
-.sticky-logo {
-  position: fixed;
-  top: 0;
+/* Conteneur du logo avec parallax */
+.parallax-logo-wrapper {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  margin-top: 0;
-  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
 }
 
+/* Ajout du parallax avec Skrollr 
+.parallax-logo-wrapper[data-top="top:-50%"] {
+  top: 50%; 
+}
+.parallax-logo-wrapper[data-bottom="top:0%"] {
+  top: 0%; 
+}
+*/
 .site-footer {
   display: block;
 }

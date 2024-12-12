@@ -1,0 +1,55 @@
+/* Banner */
+.banner {
+  position: relative;
+  height: 800px;
+  background-image: none;
+  overflow: hidden; /* Empêche le débordement de l'élément lorsque l'effet de parallax est appliqué */
+
+  & img {
+    width: 100%;
+    bottom: 0px;
+//    margin-top:35%;
+//    margin-left:60%;
+  }
+
+  &__banner,
+  &__video {
+    animation: down 2s 300ms;
+    z-index: -2;
+    position: absolute;
+    bottom: 0px;
+    left: 0px !important;    
+  }
+
+  /* Le logo dans la bannière avec parallax */
+  &__logo {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none; 
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+}
+
+/* Conteneur du logo avec parallax */
+.parallax-logo-wrapper {
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+//  transform: translate(-50%, -50%); 
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Ajout du parallax avec Skrollr 
+.parallax-logo-wrapper[data-top="top:-50%"] {
+  top: 50%; 
+}
+.parallax-logo-wrapper[data-bottom="top:0%"] {
+  top: 0%; 
+}
+*/
