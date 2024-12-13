@@ -40,7 +40,7 @@
             </button>
 
             <!-- Menu plein écran --> 
-            <div id="menu-fullscreen" >
+            <div class="menu-fullscreen" id="menu-fullscreen" >
 
                 <!-- images -->
                 <img class="logo-menu" src="<?php echo get_theme_file_uri() . '/assets/images/logo_menu.png'; ?> " alt="logo Fleurs d'oranger & chats errants">

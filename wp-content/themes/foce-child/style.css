@@ -270,7 +270,7 @@ section:not(.story), .banner .imgLogo .site-footer {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-#menu-fullscreen {
+.menu-fullscreen {
   display: none;
   position: fixed;
   top: -100%;
@@ -286,11 +286,11 @@ section:not(.story), .banner .imgLogo .site-footer {
   transform-origin: top;
   transition: top 0.5s ease-in-out;
 }
-#menu-fullscreen.active {
+.menu-fullscreen.active {
   top: 80px;
   display: block;
 }
-#menu-fullscreen .logo-menu {
+.menu-fullscreen .logo-menu {
   display: block;
   position: absolute;
   top: -4%;
@@ -298,24 +298,25 @@ section:not(.story), .banner .imgLogo .site-footer {
   margin-left: 43%;
   margin-top: 6%;
 }
-#menu-fullscreen ul {
+.menu-fullscreen ul {
   display: block;
   list-style: none;
   text-align: center;
   margin: 0;
   margin-top: 120px;
   padding-top: 5%;
+  padding-left: 0;
 }
-#menu-fullscreen ul li a {
+.menu-fullscreen ul li a {
   padding-top: 2%;
   color: #000;
   text-decoration: none;
   font-size: 3rem;
 }
-#menu-fullscreen ul li a:hover {
+.menu-fullscreen ul li a:hover {
   text-shadow: 0px 0px 14px #ff5c00;
 }
-#menu-fullscreen ul p {
+.menu-fullscreen ul p {
   text-transform: uppercase;
   position: absolute;
   bottom: 10%;
@@ -437,14 +438,10 @@ section:not(.story), .banner .imgLogo .site-footer {
   will-change: transform;
 }
 
-/* Ajout du parallax avec Skrollr 
-.parallax-logo-wrapper[data-top="top:-50%"] {
-  top: 50%; 
+.main-character {
+  padding-left: 13%;
 }
-.parallax-logo-wrapper[data-bottom="top:0%"] {
-  top: 0%; 
-}
-*/
+
 .site-footer {
   display: block;
 }
@@ -480,26 +477,19 @@ section:not(.story), .banner .imgLogo .site-footer {
     text-align: center;
     margin: 0 auto;
   }
-  .banner__video {
-    display: none;
-  }
   .menu-toggle {
     position: absolute;
     top: 1rem;
     right: 1rem;
     z-index: 2000;
   }
-  .banner__logo {
-    width: 45%;
-    bottom: 0px;
-  }
-  .menu--fullscreen {
+  .menu-fullscreen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background: #fff5e9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -509,34 +499,101 @@ section:not(.story), .banner .imgLogo .site-footer {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     overflow-y: auto;
+    overflow: auto;
   }
-  .menu--fullscreen img {
-    max-width: 70%;
-  }
-  .menu--fullscreen.active {
+  .menu-fullscreen.active {
     opacity: 1;
     visibility: visible;
-    top: 0px;
-    width: 100%;
+    top: 0;
   }
-  .menu--fullscreen.active body {
-    overflow: hidden;
+  .menu-fullscreen.active ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 90%;
+  }
+  .menu-fullscreen.active ul li a {
+    padding-top: 2%;
+    color: #000;
+    text-decoration: none;
+    font-size: 3rem;
+  }
+  .menu-fullscreen.active ul li a:hover {
+    text-shadow: 0px 0px 14px #ff5c00;
+  }
+  .menu-fullscreen.active .menuP {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-fullscreen.active .menu-logo {
+    display: block;
+    position: absolute;
+    top: -2%;
+    width: 21%;
+    margin-left: 37%;
+    margin-top: 6%;
+  }
+  .orchid {
+    position: absolute;
+    top: 2%;
+    left: -9%;
+    width: 24%;
+  }
+  .hibiscus {
+    position: absolute;
+    width: 57%;
+    bottom: -19%;
+    right: -29%;
+  }
+  .sun-flower {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    width: 20%;
+  }
+  .blue-cat {
+    position: absolute;
+    top: 20%;
+    left: 19%;
+    width: 16%;
+  }
+  .black-cat {
+    position: absolute;
+    top: 58%;
+    right: 4%;
+    width: 15%;
+  }
+  .flower {
+    position: absolute;
+    top: 54%;
+    left: 15%;
+    width: 10%;
+  }
+  .yellow-cat {
+    position: absolute;
+    width: 11%;
+    bottom: 7%;
+    left: 12%;
+  }
+  .logo {
+    max-width: 80px;
+    margin: 0 auto;
+  }
+  .banner__banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner__video {
+    display: none;
   }
   body {
     position: relative;
     overflow-y: auto;
     font-size: 14px;
     line-height: 1.5;
-  }
-  .banner--video {
-    display: none;
-  }
-  .logo {
-    max-width: 120px;
-    margin: 0 auto;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 90%;
   }
   p, li {
     font-size: 95%;
@@ -547,5 +604,15 @@ section:not(.story), .banner .imgLogo .site-footer {
   }
   .section {
     padding: 1.5rem 1rem;
+  }
+  .main-character {
+    padding-left: 30%;
+  }
+  .oscars {
+    flex-direction: column;
+    align-items: center;
+  }
+  .oscars h3 {
+    font-size: 27px;
   }
 }

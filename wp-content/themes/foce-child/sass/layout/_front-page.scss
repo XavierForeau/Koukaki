@@ -8,8 +8,6 @@
   & img {
     width: 100%;
     bottom: 0px;
-//    margin-top:35%;
-//    margin-left:60%;
   }
 
   &__banner,
@@ -45,11 +43,6 @@
   will-change: transform;
 }
 
-/* Ajout du parallax avec Skrollr 
-.parallax-logo-wrapper[data-top="top:-50%"] {
-  top: 50%; 
+.main-character {
+   padding-left: 13%;
 }
-.parallax-logo-wrapper[data-bottom="top:0%"] {
-  top: 0%; 
-}
-*/

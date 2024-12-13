@@ -60,7 +60,7 @@
 }
   
 // Activation ou non de l'affichage du menu en plein écran 
-#menu-fullscreen {
+.menu-fullscreen {
     display: none; 
     position: fixed;
     top: -100%; 
@@ -94,6 +94,7 @@
       margin: 0;
       margin-top: 120px;  
       padding-top: 5%;
+      padding-left: 0;
       li {
         a {
           padding-top: 2%;
