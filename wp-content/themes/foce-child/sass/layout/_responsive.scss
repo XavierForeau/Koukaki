@@ -1,0 +1,97 @@
+
+
+@media all and  (max-width: 768px) {    // Center the site title
+    .site-title {
+    text-align: center;
+    margin: 0 auto;
+    }
+    // suppression de la vidéo
+    .banner__video{
+        display: none;
+    }
+    // Align the menu toggle (burger menu) to the right
+    .menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000; // Ensure it's above other content
+    }
+    .banner__logo {
+        width: 45%;
+        bottom: 0px;
+    }
+    // Fullscreen menu on burger click
+    .menu--fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff; // Adjust background color
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500; // Ensure menu is above content but below toggle
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto; // Allow scrolling within the menu if content overflows
+ 
+        // change the size of the logo
+        img {
+            max-width: 70%;
+        }
+    }
+
+    // Menu active state
+    .menu--fullscreen.active {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+    width: 100%;
+
+    // Disable scroll on body when the menu is active
+    body {
+        overflow: hidden;
+    }
+    }
+
+    // Ensure main content is not blocked by the menu
+    body {
+    position: relative;
+    overflow-y: auto; // Ensure vertical scrolling works
+    font-size: 14px; // Base font size for mobile
+    line-height: 1.5; // Adjust line height for readability
+    }
+
+    // Disable the banner video
+    .banner--video {
+    display: none;
+    }
+
+    // Adjust logos, fonts, text sizes, and spacing for mobile
+    .logo {
+    max-width: 120px; // Example size, adjust as needed
+    margin: 0 auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    font-size: 90%; // Reduce header sizes proportionally
+    }
+
+    p, li {
+    font-size: 95%; // Slightly reduce text size
+    margin-bottom: 1rem; // Adjust spacing for mobile layout
+    }
+
+    .container {
+    padding: 1rem; // Ensure adequate spacing within the container
+    }
+
+    // Additional spacing adjustments
+    .section {
+    padding: 1.5rem 1rem;
+    }
+}
+

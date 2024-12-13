@@ -474,3 +474,78 @@ section:not(.story), .banner .imgLogo .site-footer {
   height: 129px;
   margin-top: 30px;
 }
+
+@media all and (max-width: 768px) {
+  .site-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .banner__video {
+    display: none;
+  }
+  .menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+  }
+  .banner__logo {
+    width: 45%;
+    bottom: 0px;
+  }
+  .menu--fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+  }
+  .menu--fullscreen img {
+    max-width: 70%;
+  }
+  .menu--fullscreen.active {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+    width: 100%;
+  }
+  .menu--fullscreen.active body {
+    overflow: hidden;
+  }
+  body {
+    position: relative;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .banner--video {
+    display: none;
+  }
+  .logo {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 90%;
+  }
+  p, li {
+    font-size: 95%;
+    margin-bottom: 1rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .section {
+    padding: 1.5rem 1rem;
+  }
+}
