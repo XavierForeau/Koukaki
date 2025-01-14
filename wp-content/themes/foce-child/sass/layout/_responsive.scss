@@ -30,8 +30,8 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
-      overflow-y: auto; 
-      overflow: auto;
+      //overflow-y: auto; 
+      //overflow: auto;
     }
    
     // Menu active state
@@ -131,20 +131,20 @@
     // Affiche le banner en plein écran
     .banner__banner {
       position: relative;
-      width: 100vw;
-      height: 100vh; 
-      background-size: cover; 
-      background-position: center;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
     }
     // Not display the video
     .banner__video{
         display: none;
     }
-   
-    
+    .banner__logo{
+        max-width: 45%;
+    }
     body {
       position: relative;
-      overflow-y: auto; //  scrolling vertical
+      //overflow-y: auto; //  scrolling vertical
 
       font-size: 14px; 
       line-height: 1.5; 

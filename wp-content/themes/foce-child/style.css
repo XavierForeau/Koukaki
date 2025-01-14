@@ -403,7 +403,6 @@ section:not(.story), .banner .imgLogo .site-footer {
   position: relative;
   height: 800px;
   background-image: none;
-  overflow: hidden; /* Empêche le débordement de l'élément lorsque l'effet de parallax est appliqué */
   /* Le logo dans la bannière avec parallax */
 }
 .banner img {
@@ -498,8 +497,6 @@ section:not(.story), .banner .imgLogo .site-footer {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    overflow-y: auto;
-    overflow: auto;
   }
   .menu-fullscreen.active {
     opacity: 1;
@@ -581,17 +578,18 @@ section:not(.story), .banner .imgLogo .site-footer {
   }
   .banner__banner {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
   }
   .banner__video {
     display: none;
   }
+  .banner__logo {
+    max-width: 45%;
+  }
   body {
     position: relative;
-    overflow-y: auto;
     font-size: 14px;
     line-height: 1.5;
   }
