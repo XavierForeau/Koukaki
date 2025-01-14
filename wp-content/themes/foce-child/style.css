@@ -22,7 +22,8 @@
     opacity: 1;
   }
 }
-section:not(.story), .banner .imgLogo .site-footer {
+section:not(.story),
+.banner .imgLogo .site-footer {
   animation: effet-fade-in 2s 0ms ease-in-out both;
 }
 
@@ -51,7 +52,9 @@ section:not(.story), .banner .imgLogo .site-footer {
     opacity: 1;
   }
 }
-*::after, .studio h2::before, .site-footer::before {
+*::after,
+.studio h2::before,
+.site-footer::before {
   animation: rotation 19s linear infinite;
 }
 
@@ -143,12 +146,14 @@ section:not(.story), .banner .imgLogo .site-footer {
   width: 100%;
 }
 
-.swiper-slide-next, .swiper-slide-prev {
+.swiper-slide-next,
+.swiper-slide-prev {
   opacity: 1 !important;
   box-shadow: none !important;
 }
 
-.swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-left {
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-left {
   background-image: none !important;
 }
 
@@ -323,8 +328,7 @@ section:not(.story), .banner .imgLogo .site-footer {
 }
 
 .main-navigation.toggled ul {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .random-flower {
@@ -380,11 +384,18 @@ section:not(.story), .banner .imgLogo .site-footer {
   left: 25%;
 }
 
-.sun-flower, .flower, .orchid, .hibiscus, .rdm-flower {
+.sun-flower,
+.flower,
+.orchid,
+.hibiscus,
+.rdm-flower {
   animation: rotation 4s linear infinite;
 }
 
-.blue-cat, .black-cat, .yellow-cat, .logo {
+.blue-cat,
+.black-cat,
+.yellow-cat,
+.logo {
   animation: floating 3s ease-in-out infinite alternate;
 }
 
@@ -620,5 +631,11 @@ section:not(.story), .banner .imgLogo .site-footer {
   }
   .oscars h3 {
     font-size: 27px;
+  }
+  .main-character h3 {
+    background-position: left;
+    text-align: left;
+    padding-left: 35px;
+    margin-left: 120px;
   }
 }

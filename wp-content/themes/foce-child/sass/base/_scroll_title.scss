@@ -1,27 +1,26 @@
 // Scroll des titres
-.title span{
-	position: relative;
-	top: 80px;
- 	opacity: 0;
+.title span {
+  position: relative;
+  top: 80px;
+  opacity: 0;
 }
 
 .scroll-title span:first-child {
-	animation: scroll 500ms ease-in-out both;
-} 
+  animation: scroll 500ms ease-in-out both;
+}
 .scroll-title span:last-child {
-	animation: scroll 1s 500ms ease-in-out both;
-} 
- 
-@keyframes scroll {
-	0% {
-		position: relative;
-  		top: 80px;
-        opacity: 0;
-	}
-	100% {
-		position: relative;
-  		top: 0;
-		opacity: 1;
-	}
+  animation: scroll 1s 500ms ease-in-out both;
 }
 
+@keyframes scroll {
+  0% {
+    position: relative;
+    top: 80px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}

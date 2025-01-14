@@ -1,53 +1,50 @@
-
 .story #place {
-    background-image: url("./assets/images/place_bg_no_clouds.png");
+  background-image: url("./assets/images/place_bg_no_clouds.png");
 }
 
 //animation nuages
 .story .little-cloud,
 .story .big-cloud {
-    position: absolute;
-    z-index: 1;
-    filter: blur(12px);
+  position: absolute;
+  z-index: 1;
+  filter: blur(12px);
 }
 .story .big-cloud {
-    top: 60px;
-    width: 316px;
-    height: 122px;
+  top: 60px;
+  width: 316px;
+  height: 122px;
 }
 .story .little-cloud {
-    top: 270px;
-    width: 150px;
-    height: 60px;
+  top: 270px;
+  width: 150px;
+  height: 60px;
 }
- 
+
 //------ insert parallax
 
 /* Conteneur pour le parallax */
 .parallax-container {
-    position: relative;
-//    height: 100vh; /* La taille de la fenêtre pour la première section */
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Image avec l'effet de parallax horizontal */
 .parallax-little-cloud {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateY(-50%);
-    width: 20%; /* Taille de l'image */
-    height: auto;
-//    filter: blur(25px);
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 20%; /* Taille de l'image */
+  height: auto;
 }
 
 /* Image avec l'effet de parallax horizontal */
 .parallax-big-cloud {
-    position: absolute;
-    top: 5%;
-    left: 70%;
-    transform: translateY(-50%);
-    width: 30%; /* Taille de l'image en % de la largeur */
-    height: auto;
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  transform: translateY(-50%);
+  width: 30%; /* Taille de l'image en % de la largeur */
+  height: auto;
 }

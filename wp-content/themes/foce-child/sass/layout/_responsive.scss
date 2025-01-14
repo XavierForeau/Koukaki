@@ -29,8 +29,6 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    //overflow-y: auto;
-    //overflow: auto;
   }
 
   // Menu active state
@@ -55,10 +53,6 @@
           }
         }
       }
-    }
-    // Disable scroll on body when the menu is active
-    body {
-      //overflow: hidden;
     }
 
     .menuP {
@@ -145,8 +139,6 @@
   }
   body {
     position: relative;
-    //overflow-y: auto; //  scrolling vertical
-
     font-size: 14px;
     line-height: 1.5;
   }
@@ -178,5 +170,12 @@
     h3 {
       font-size: 27px;
     }
+  }
+
+  .main-character h3 {
+    background-position: left;
+    text-align: left;
+    padding-left: 35px;
+    margin-left: 120px;
   }
 }
