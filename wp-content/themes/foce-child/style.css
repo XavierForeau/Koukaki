@@ -324,6 +324,7 @@ section:not(.story), .banner .imgLogo .site-footer {
 
 .main-navigation.toggled ul {
   display: flex;
+  flex-direction: column;
 }
 
 .random-flower {
@@ -586,14 +587,21 @@ section:not(.story), .banner .imgLogo .site-footer {
     display: none;
   }
   .banner__logo {
-    max-width: 45%;
+    max-width: 65%;
+    top: 30%;
+    left: 56%;
   }
   body {
     position: relative;
     font-size: 14px;
     line-height: 1.5;
   }
-  p, li {
+  .big-cloud,
+  .little-cloud {
+    display: none;
+  }
+  p,
+  li {
     font-size: 95%;
     margin-bottom: 1rem;
   }

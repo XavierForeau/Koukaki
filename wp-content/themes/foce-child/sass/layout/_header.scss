@@ -118,6 +118,7 @@
 // lorsque le menu est ouvert
 .main-navigation.toggled ul {
     display: flex;
+    flex-direction: column; 
 }
 
 // différents objets sur le menu
